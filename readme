@@ -1,0 +1,16 @@
+Dear Xiaofei:
+	This demo is all your need.
+
+使用说明： 	
+1.rawData文件夹(存放原始数据表，每个表的具体字段在程序featureCode文件夹中的main.py中自己看哈)
+2.featureCode文件夹存放特征工程代码（入口函数为main.py）
+3.modelCode文件夹存放模型代码（包括模型训练、线下测试、线上提交代码，分别是train.py,metric.py,inference.py，这里只实现了一个简单的gbdt模型）
+4.cacheData存放feature文件、label文件（这些文件由featureCode中的main.py生成)
+5.submit文件夹用于存放所有可以直接提交官网的结果数据（由modelCode/inference.py生成）
+6.运行步骤: (1)运行featureCode文件夹下的main.py文件，生成训练集、测试集、验证集的特征和标签 
+	   (2)运行modelCode文件夹下的train.py文件训练模型
+	   (3)运行modelCde文件夹下的metric.py和inference.py文件可以分别线下测试(2)中生成的模型，并用该模型生成结果文件
+
+
+Best Wishes,
+Zj
