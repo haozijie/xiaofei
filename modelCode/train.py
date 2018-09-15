@@ -1,3 +1,4 @@
+import os
 import time
 import numpy as np
 from sklearn.ensemble import GradientBoostingClassifier
@@ -17,6 +18,10 @@ def train_gbdt(phase='online'):
 	filename = 'gbdt_'+str(len(train_x[0]))+'_'+str(int(time.time()))+'_'+phase+\
 	'_lr'+str(p['lr'])+'_num'+str(p['number'])+'_depth'+str(p['depth'])+'_fr'+str(p['feature_ratio'])+\
 	'_sr'+str(p['sample_ratio'])+'.m'
+
+
+    if not os.path.exists('./modelFiles'):
+        os.makedirs('./modelFiles')
 	joblib.dump(clf,'./modelFiles/'+filename)
 
 
